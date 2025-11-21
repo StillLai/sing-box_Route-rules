@@ -240,7 +240,55 @@
     },
     {
       "type": "selector",
+      "tag": "🅰️ 亚马逊",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "⚡ 延迟最低",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区"
+      ]
+    },
+    {
+      "type": "selector",
       "tag": "📺 哔哩哔哩",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "⚡ 延迟最低",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🎮 Steam",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "⚡ 延迟最低",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🦅 育碧",
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎯 全球直连",
@@ -273,22 +321,6 @@
     {
       "type": "selector",
       "tag": "🪟 微软服务",
-      "interrupt_exist_connections": true,
-      "outbounds": [
-        "🎯 全球直连",
-        "🚀 节点选择",
-        "⚡ 延迟最低",
-        "🇭🇰 香港节点",
-        "🇹🇼 台湾节点",
-        "🇸🇬 新加坡节点",
-        "🇯🇵 日本节点",
-        "🇺🇸 美国节点",
-        "🧭 其它地区"
-      ]
-    },
-    {
-      "type": "selector",
-      "tag": "🇬 谷歌服务",
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎯 全球直连",
@@ -416,7 +448,39 @@
     },
     {
       "type": "selector",
-      "tag": "📹 油管视频",
+      "tag": "☁️ GoogleFCM",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "⚡ 延迟最低",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🇬 Google",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "⚡ 延迟最低",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "📹 YouTube",
       "interrupt_exist_connections": true,
       "outbounds": [
         "🚀 节点选择",
@@ -633,6 +697,48 @@
         "update_interval": "6h"
       },
       {
+        "tag": "Amazon",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Amazon.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "AmazonIP",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/AmazonIP.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "AmazonCN",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/AmazonCN.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Steam",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Steam.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "UBI",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/UBI.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Ubisoft",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Ubisoft.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "microsoft-cn",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/microsoft-cn.srs",
@@ -643,13 +749,6 @@
         "tag": "apple-cn",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/apple-cn.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "google-cn",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/google-cn.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -692,6 +791,20 @@
         "tag": "appletv",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/appletv.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "GoogleFCM",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/GoogleFCM.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Google",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Google.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -860,6 +973,15 @@
       {
         "action": "route",
         "rule_set": [
+          "Amazon",
+          "AmazonIP",
+          "AmazonCN"
+        ],
+        "outbound": "🅰️ 亚马逊"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "ads"
         ],
         "outbound": "🛑 广告域名"
@@ -895,16 +1017,17 @@
       {
         "action": "route",
         "rule_set": [
-          "google-cn"
+          "Steam"
         ],
-        "outbound": "🇬 谷歌服务"
+        "outbound": "🎮 Steam"
       },
       {
         "action": "route",
         "rule_set": [
-          "games-cn"
+          "UBI",
+          "Ubisoft"
         ],
-        "outbound": "🎮 游戏服务"
+        "outbound": "🦅 育碧"
       },
       {
         "action": "route",
@@ -920,6 +1043,13 @@
           "gamesip"
         ],
         "outbound": "🎮 游戏平台"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "games-cn"
+        ],
+        "outbound": "🎮 游戏服务"
       },
       {
         "action": "route",
@@ -967,9 +1097,23 @@
       {
         "action": "route",
         "rule_set": [
+          "GoogleFCM"
+        ],
+        "outbound": "☁️ GoogleFCM"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Google"
+        ],
+        "outbound": "🇬 Google"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "youtube"
         ],
-        "outbound": "📹 油管视频"
+        "outbound": "📹 YouTube"
       },
       {
         "action": "route",
