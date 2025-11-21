@@ -91,7 +91,7 @@ def parse_list_file(link, output_directory):
 
     os.makedirs(output_directory, exist_ok=True)
 
-    result_rules = {"version": 3, "rules": []}
+    result_rules = {"version": 2, "rules": []}
     domain_entries = []
 
     for pattern, addresses in df.groupby('pattern')['address'].apply(list).to_dict().items():
