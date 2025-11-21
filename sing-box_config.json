@@ -991,13 +991,6 @@
       {
         "action": "route",
         "rule_set": [
-          "applications"
-        ],
-        "outbound": "⬇️ 直连软件"
-      },
-      {
-        "action": "route",
-        "rule_set": [
           "networktest"
         ],
         "outbound": "📈 网络测试"
@@ -1145,6 +1138,13 @@
           "ai"
         ],
         "outbound": "🤖 AI 平台"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "applications"
+        ],
+        "outbound": "⬇️ 直连软件"
       },
       {
         "action": "route",
