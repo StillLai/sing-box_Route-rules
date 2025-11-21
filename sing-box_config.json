@@ -1149,18 +1149,18 @@
       {
         "action": "route",
         "rule_set": [
-          "cn",
-          "cnip"
-        ],
-        "outbound": "🎯 全球直连"
-      },
-      {
-        "action": "route",
-        "rule_set": [
           "tld-proxy",
           "proxy"
         ],
         "outbound": "🚀 节点选择"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "cn",
+          "cnip"
+        ],
+        "outbound": "🎯 全球直连"
       }
     ],
     "final": "🐟 漏网之鱼"
