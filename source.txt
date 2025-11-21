@@ -1,1 +1,4 @@
-https://github.com/GitMetaio/Surfing/raw/refs/heads/rm/Home/rules/WebRTC.list
+https://gist.github.com/StillLai/8a0dca01e51606a4ee2c5a03b9cd52f2/raw/custom_whitelist.list
+https://gist.github.com/StillLai/8a0dca01e51606a4ee2c5a03b9cd52f2/raw/custom_proxy.list
+https://gist.github.com/StillLai/8a0dca01e51606a4ee2c5a03b9cd52f2/raw/custom_direct.list
+https://gist.github.com/StillLai/8a0dca01e51606a4ee2c5a03b9cd52f2/raw/custom_block.list
