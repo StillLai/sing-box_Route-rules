@@ -4,3 +4,5 @@ https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/AmazonIP/AmazonIP.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/AmazonCN/AmazonCN.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Steam/Steam.list
+https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/UBI/UBI.list
+https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Ubisoft/Ubisoft.list
