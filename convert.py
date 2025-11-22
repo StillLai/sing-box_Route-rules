@@ -78,23 +78,59 @@ def parse_list_file(link, output_directory):
 
     df = df[~df['pattern'].str.contains('#')].reset_index(drop=True)
 
-    map_dict = {'DOMAIN-SUFFIX': 'domain_suffix', 'HOST-SUFFIX': 'domain_suffix', 'DOMAIN': 'domain', 'HOST': 'domain', 'host': 'domain',
-                'DOMAIN-KEYWORD':'domain_keyword', 'HOST-KEYWORD': 'domain_keyword', 'host-keyword': 'domain_keyword', 'IP-CIDR': 'ip_cidr',
-                'ip-cidr': 'ip_cidr', 'IP-CIDR6': 'ip_cidr', 
-                'IP6-CIDR': 'ip_cidr','SRC-IP-CIDR': 'source_ip_cidr', 'GEOIP': 'geoip', 'DST-PORT': 'port',
-                'SRC-PORT': 'source_port', 'URL-REGEX': 'domain_regex', 'PROCESS-NAME': 'process_name'}
-
-    df = df[df['pattern'].isin(map_dict.keys())].reset_index(drop=True)
-
-    df = df.drop_duplicates().reset_index(drop=True)
-    df['pattern'] = df['pattern'].replace(map_dict)
+    # 恢复原始映射字典，但处理重复键的情况
+    map_dict = {
+        'DOMAIN-SUFFIX': 'domain_suffix', 
+        'HOST-SUFFIX': 'domain_suffix', 
+        'DOMAIN': 'domain', 
+        'HOST': 'domain', 
+        'host': 'domain',
+        'DOMAIN-KEYWORD': 'domain_keyword', 
+        'HOST-KEYWORD': 'domain_keyword', 
+        'host-keyword': 'domain_keyword', 
+        'IP-CIDR': 'ip_cidr',
+        'ip-cidr': 'ip_cidr', 
+        'IP-CIDR6': 'ip_cidr', 
+        'IP6-CIDR': 'ip_cidr',
+        'SRC-IP-CIDR': 'source_ip_cidr', 
+        'GEOIP': 'geoip', 
+        'DST-PORT': 'port',
+        'SRC-PORT': 'source_port', 
+        'URL-REGEX': 'domain_regex', 
+        'PROCESS-NAME': 'process_name'
+    }
+    
+    # 处理重复键：PROCESS-NAME映射到package_name
+    # 创建一个新的DataFrame来处理重复映射
+    df_filtered = df[df['pattern'].isin(map_dict.keys())].reset_index(drop=True)
+    
+    # 创建处理重复映射的DataFrame
+    duplicate_mappings = []
+    for pattern in df_filtered['pattern'].unique():
+        if pattern == 'PROCESS-NAME':
+            # 对于PROCESS-NAME，创建两个映射
+            duplicate_mappings.append({'pattern': pattern, 'mapped_pattern': 'process_name'})
+            duplicate_mappings.append({'pattern': pattern, 'mapped_pattern': 'package_name'})
+        else:
+            # 对于其他模式，使用正常映射
+            duplicate_mappings.append({'pattern': pattern, 'mapped_pattern': map_dict[pattern]})
+    
+    mapping_df = pd.DataFrame(duplicate_mappings)
+    
+    # 合并原始数据和映射
+    df_with_mappings = pd.merge(df_filtered, mapping_df, on='pattern')
+    
+    df_with_mappings = df_with_mappings.drop_duplicates().reset_index(drop=True)
 
     os.makedirs(output_directory, exist_ok=True)
 
     result_rules = {"version": 3, "rules": []}
     domain_entries = []
 
-    for pattern, addresses in df.groupby('pattern')['address'].apply(list).to_dict().items():
+    # 按映射后的模式分组处理
+    for pattern, group in df_with_mappings.groupby('mapped_pattern'):
+        addresses = group['address'].tolist()
+        
         if pattern == 'domain_suffix':
             rule_entry = {pattern: ['.' + address.strip() for address in addresses]}
             result_rules["rules"].append(rule_entry)
@@ -104,6 +140,7 @@ def parse_list_file(link, output_directory):
         else:
             rule_entry = {pattern: [address.strip() for address in addresses]}
             result_rules["rules"].append(rule_entry)
+            
     domain_entries = list(set(domain_entries))
     if domain_entries:
         result_rules["rules"].insert(0, {'domain': domain_entries})
