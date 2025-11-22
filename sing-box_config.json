@@ -1084,14 +1084,14 @@
       {
         "action": "route",
         "rule_set": [
-          "GoogleFCM"
+          "googlefcm"
         ],
         "outbound": "☁️ GoogleFCM"
       },
       {
         "action": "route",
         "rule_set": [
-          "Google"
+          "google"
         ],
         "outbound": "🇬 Google"
       },
