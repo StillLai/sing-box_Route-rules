@@ -706,7 +706,7 @@
         "update_interval": "6h"
       },
       {
-        "tag": "AmazonIP",
+        "tag": "amazon-ads",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/amazon-ads.srs",
         "format": "binary",
