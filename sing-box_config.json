@@ -1012,8 +1012,7 @@
       {
         "action": "route",
         "rule_set": [
-          "UBI",
-          "Ubisoft"
+          "ubisoft"
         ],
         "outbound": "🦅 育碧"
       },
