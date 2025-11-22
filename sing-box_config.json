@@ -722,7 +722,7 @@
       {
         "tag": "Steam",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Steam.srs",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/steam.srs",
         "format": "binary",
         "update_interval": "6h"
       },
