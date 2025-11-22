@@ -85,7 +85,8 @@
           "private",
           "cn",
           "trackerslist",
-          "amazon"
+          "amazon",
+          "amazon-ads"
         ],
         "server": "Ali-DNS"
       },
