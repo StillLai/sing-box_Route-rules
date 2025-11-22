@@ -720,7 +720,7 @@
         "update_interval": "6h"
       },
       {
-        "tag": "Steam",
+        "tag": "steam",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/steam.srs",
         "format": "binary",
@@ -1005,7 +1005,7 @@
       {
         "action": "route",
         "rule_set": [
-          "Steam"
+          "steam"
         ],
         "outbound": "🎮 Steam"
       },
