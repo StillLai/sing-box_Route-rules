@@ -961,9 +961,8 @@
       {
         "action": "route",
         "rule_set": [
-          "Amazon",
-          "AmazonIP",
-          "AmazonCN"
+          "amazon",
+          "amazon-ads"
         ],
         "outbound": "🅰️ 亚马逊"
       },
