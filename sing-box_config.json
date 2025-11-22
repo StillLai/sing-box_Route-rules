@@ -785,14 +785,14 @@
         "update_interval": "6h"
       },
       {
-        "tag": "googlefcm",
+        "tag": "GoogleFCM",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/GoogleFCM.srs",
         "format": "binary",
         "update_interval": "6h"
       },
       {
-        "tag": "google",
+        "tag": "Google",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Google.srs",
         "format": "binary",
