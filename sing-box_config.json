@@ -84,7 +84,8 @@
           "fakeip-filter",
           "private",
           "cn",
-          "trackerslist"
+          "trackerslist",
+          "amazon"
         ],
         "server": "Ali-DNS"
       },
