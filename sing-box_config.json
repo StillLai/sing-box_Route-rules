@@ -985,7 +985,8 @@
         "action": "route",
         "rule_set": [
           "cn",
-          "cnip"
+          "cnip",
+          "custom_direct"
         ],
         "outbound": "🎯 全球直连"
       },
