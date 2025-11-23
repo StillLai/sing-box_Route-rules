@@ -755,9 +755,9 @@
         "update_interval": "6h"
       },
       {
-        "tag": "Spotify",
+        "tag": "Facebook",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Spotify.srs",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Facebook.srs",
         "format": "binary",
         "update_interval": "6h"
       },
