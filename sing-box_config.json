@@ -941,7 +941,7 @@
       {
         "action": "route",
         "rule_set": [
-          ""
+          "BiliBili"
         ],
         "outbound": "📺 哔哩哔哩"
       },
