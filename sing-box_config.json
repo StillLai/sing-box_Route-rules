@@ -80,7 +80,8 @@
       },
       {
         "rule_set": [
-          "ads"
+          "ads",
+          "custom_block"
         ],
         "action": "reject",
         "method": "drop"
