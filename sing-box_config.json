@@ -81,8 +81,10 @@
       {
         "rule_set": [
           "fakeip-filter",
-          "private",
           "cn",
+          "cnip",
+          "private",
+          "privateip",
           "trackerslist",
           "amazon",
           "amazon-ads"
