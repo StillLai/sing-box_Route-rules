@@ -934,14 +934,6 @@
       {
         "action": "route",
         "rule_set": [
-          "private",
-          "privateip"
-        ],
-        "outbound": "🔒 私有网络"
-      },
-      {
-        "action": "route",
-        "rule_set": [
           "trackerslist"
         ],
         "outbound": "📋 Trackerslist"
@@ -949,23 +941,10 @@
       {
         "action": "route",
         "rule_set": [
-          "networktest"
+          "private",
+          "privateip"
         ],
-        "outbound": "📈 网络测试"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "microsoft-cn"
-        ],
-        "outbound": "🪟 微软服务"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "apple-cn"
-        ],
-        "outbound": "🍎 苹果服务"
+        "outbound": "🔒 私有网络"
       },
       {
         "action": "route",
@@ -980,71 +959,6 @@
           "ubisoft"
         ],
         "outbound": "🦅 育碧"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "bilibili"
-        ],
-        "outbound": "📺 哔哩哔哩"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "games",
-          "gamesip"
-        ],
-        "outbound": "🎮 游戏平台"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "games-cn"
-        ],
-        "outbound": "🎮 游戏服务"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "telegramip"
-        ],
-        "outbound": "📲 电报消息"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "netflix",
-          "netflixip"
-        ],
-        "outbound": "🎥 奈飞视频"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "disney"
-        ],
-        "outbound": "📽️ 迪士尼+"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "max"
-        ],
-        "outbound": "🎞️ Max"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "primevideo"
-        ],
-        "outbound": "🎬 Prime Video"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "appletv"
-        ],
-        "outbound": "🍎 Apple TV+"
       },
       {
         "action": "route",
@@ -1070,38 +984,10 @@
       {
         "action": "route",
         "rule_set": [
-          "tiktok"
+          "cn",
+          "cnip"
         ],
-        "outbound": "🎵 TikTok"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "spotify"
-        ],
-        "outbound": "🎶 Spotify"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "media",
-          "mediaip"
-        ],
-        "outbound": "🌍 国外媒体"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "ai"
-        ],
-        "outbound": "🤖 AI 平台"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "applications"
-        ],
-        "outbound": "⬇️ 直连软件"
+        "outbound": "🎯 全球直连"
       },
       {
         "action": "route",
@@ -1110,14 +996,6 @@
           "proxy"
         ],
         "outbound": "🚀 节点选择"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "cn",
-          "cnip"
-        ],
-        "outbound": "🎯 全球直连"
       }
     ],
     "final": "🐟 漏网之鱼"
