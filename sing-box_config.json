@@ -762,6 +762,34 @@
         "update_interval": "6h"
       },
       {
+        "tag": "OpenAI",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/OpenAI.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Netflix",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Netflix.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Discord",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Discord.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Twitter",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Twitter.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "Spotify",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Spotify.srs",
@@ -800,34 +828,6 @@
         "tag": "Microsoft",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Microsoft.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "OpenAI",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/OpenAI.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "Netflix",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Netflix.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "Discord",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Discord.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "Twitter",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Twitter.srs",
         "format": "binary",
         "update_interval": "6h"
       },
