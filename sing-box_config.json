@@ -985,6 +985,8 @@
         "rule_set": [
           "cn",
           "cnip",
+          "private",
+          "privateip",
           "custom_direct"
         ],
         "outbound": "🎯 全球直连"
