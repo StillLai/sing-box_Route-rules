@@ -994,7 +994,8 @@
         "action": "route",
         "rule_set": [
           "tld-proxy",
-          "proxy"
+          "proxy",
+          "custom_proxy"
         ],
         "outbound": "🚀 节点选择"
       }
