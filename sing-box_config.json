@@ -79,6 +79,9 @@
         "server": "Fakeip-DNS"
       },
       {
+        "rule_set": [
+          "fakeip-filter"
+        ],
         "action": "reject",
         "method": "drop"
       },
