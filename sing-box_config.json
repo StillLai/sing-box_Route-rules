@@ -81,6 +81,7 @@
       {
         "rule_set": [
           "ads",
+          "WebRTC",
           "custom_block"
         ],
         "action": "reject",
