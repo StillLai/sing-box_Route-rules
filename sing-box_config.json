@@ -955,7 +955,14 @@
       {
         "action": "route",
         "rule_set": [
-          "steam"
+          ""
+        ],
+        "outbound": "🍠 小红书"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
         ],
         "outbound": "🎮 Steam"
       },
@@ -965,6 +972,41 @@
           "ubisoft"
         ],
         "outbound": "🦅 育碧"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "🍠 小红书"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "🍠 小红书"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "🍠 小红书"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "🍠 小红书"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "🍠 小红书"
       },
       {
         "action": "route",
@@ -983,9 +1025,51 @@
       {
         "action": "route",
         "rule_set": [
-          "youtube"
+          ""
         ],
-        "outbound": "📹 YouTube"
+        "outbound": "🍎 Apple"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "🪟 Microsoft"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "🎥 Netflix"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "💚 Spotify"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "👍 Facebook"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          ""
+        ],
+        "outbound": "✈️ Telegram"
       },
       {
         "action": "route",
