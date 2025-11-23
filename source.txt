@@ -23,3 +23,4 @@ https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Apple/Apple.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Microsoft/Microsoft.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/OpenAI/OpenAI.list
+https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Netflix/Netflix.list
