@@ -17,4 +17,5 @@ https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Steam/Steam.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/TikTok/TikTok.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Spotify/Spotify.list
+https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Facebook/Facebook.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Telegram/Telegram.list
