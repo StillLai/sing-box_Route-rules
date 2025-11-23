@@ -941,6 +941,13 @@
       {
         "action": "route",
         "rule_set": [
+          "DouYin"
+        ],
+        "outbound": "🎵 抖音"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "private",
           "privateip"
         ],
