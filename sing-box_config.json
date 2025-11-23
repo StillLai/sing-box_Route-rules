@@ -769,6 +769,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "YouTube",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/YouTube.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "microsoft-cn",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/microsoft-cn.srs",
