@@ -664,6 +664,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "WebRTC",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/WebRTC.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "fakeip-filter",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs",
