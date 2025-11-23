@@ -137,6 +137,19 @@ def parse_list_file(link, output_directory):
             domain_entries.extend([address.strip() for address in addresses])
         elif pattern == 'domain':
             domain_entries.extend([address.strip() for address in addresses])
+        elif pattern in ['port', 'source_port']:
+            # 特殊处理端口字段，将端口号转换为数字
+            port_numbers = []
+            for address in addresses:
+                address = address.strip()
+                try:
+                    # 尝试将端口号转换为整数
+                    port_numbers.append(int(address))
+                except ValueError:
+                    # 如果转换失败，保持原样（可能是端口范围或其他格式）
+                    port_numbers.append(address)
+            rule_entry = {pattern: port_numbers}
+            result_rules["rules"].append(rule_entry)
         else:
             rule_entry = {pattern: [address.strip() for address in addresses]}
             result_rules["rules"].append(rule_entry)
@@ -146,8 +159,21 @@ def parse_list_file(link, output_directory):
         result_rules["rules"].insert(0, {'domain': domain_entries})
 
     file_name = os.path.join(output_directory, f"{os.path.basename(link).split('.')[0]}.json")
+    
+    # 自定义 JSON 编码器，确保端口数字不被转换为字符串
+    class PortNumberEncoder(json.JSONEncoder):
+        def encode(self, obj):
+            if isinstance(obj, dict):
+                return '{' + ', '.join(f'"{k}": {self.encode(v)}' for k, v in obj.items()) + '}'
+            elif isinstance(obj, list):
+                return '[' + ', '.join(self.encode(item) for item in obj) + ']'
+            elif isinstance(obj, (int, float)) and not isinstance(obj, bool):
+                return str(obj)
+            else:
+                return super().encode(obj)
+    
     with open(file_name, 'w', encoding='utf-8') as output_file:
-        json.dump(sort_dict(result_rules), output_file, ensure_ascii=False, indent=2)
+        json.dump(sort_dict(result_rules), output_file, ensure_ascii=False, indent=2, cls=PortNumberEncoder)
 
     srs_path = file_name.replace(".json", ".srs")
     os.system(f"sing-box rule-set compile --output {srs_path} {file_name}")
