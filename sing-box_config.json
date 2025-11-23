@@ -632,8 +632,29 @@
         "tag": "custom_whitelist",
         "type": "remote",
         "url": "https://gist.github.com/StillLai/b7ebdc48aabb91f7aab47009d04f800b/raw/custom_whitelist.json",
-        "format": "binary",
-        "update_interval": "6h"
+        "format": "source",
+        "update_interval": "2h"
+      },
+      {
+        "tag": "custom_block",
+        "type": "remote",
+        "url": "https://gist.github.com/StillLai/b7ebdc48aabb91f7aab47009d04f800b/raw/custom_block.json",
+        "format": "source",
+        "update_interval": "2h"
+      },
+      {
+        "tag": "custom_direct",
+        "type": "remote",
+        "url": "https://gist.github.com/StillLai/b7ebdc48aabb91f7aab47009d04f800b/raw/custom_direct.json",
+        "format": "source",
+        "update_interval": "2h"
+      },
+      {
+        "tag": "custom_proxy",
+        "type": "remote",
+        "url": "https://gist.github.com/StillLai/b7ebdc48aabb91f7aab47009d04f800b/raw/custom_proxy.json",
+        "format": "source",
+        "update_interval": "2h"
       },
       {
         "tag": "ads",
