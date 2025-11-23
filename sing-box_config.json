@@ -978,35 +978,35 @@
         "rule_set": [
           ""
         ],
-        "outbound": "🍠 小红书"
+        "outbound": "🐱 GitHub"
       },
       {
         "action": "route",
         "rule_set": [
           ""
         ],
-        "outbound": "🍠 小红书"
+        "outbound": "💬 Discord"
       },
       {
         "action": "route",
         "rule_set": [
           ""
         ],
-        "outbound": "🍠 小红书"
+        "outbound": "🎶 TikTok"
       },
       {
         "action": "route",
         "rule_set": [
           ""
         ],
-        "outbound": "🍠 小红书"
+        "outbound": "🐦 Twitter(X)"
       },
       {
         "action": "route",
         "rule_set": [
           ""
         ],
-        "outbound": "🍠 小红书"
+        "outbound": "📹 YouTube"
       },
       {
         "action": "route",
