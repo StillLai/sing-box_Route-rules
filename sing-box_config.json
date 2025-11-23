@@ -942,13 +942,6 @@
       {
         "action": "route",
         "rule_set": [
-          "ads"
-        ],
-        "outbound": "🛑 广告域名"
-      },
-      {
-        "action": "route",
-        "rule_set": [
           "private",
           "privateip"
         ],
