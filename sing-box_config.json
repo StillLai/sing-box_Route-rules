@@ -934,6 +934,14 @@
       {
         "action": "route",
         "rule_set": [
+          "ads",
+          "custom_block"
+        ],
+        "outbound": "🛑 广告域名"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "ads"
         ],
         "outbound": "🛑 广告域名"
