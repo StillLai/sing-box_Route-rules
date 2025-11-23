@@ -962,14 +962,15 @@
       {
         "action": "route",
         "rule_set": [
-          ""
+          "Steam"
         ],
         "outbound": "🎮 Steam"
       },
       {
         "action": "route",
         "rule_set": [
-          "ubisoft"
+          "UBI",
+          "Ubisoft"
         ],
         "outbound": "🦅 育碧"
       },
