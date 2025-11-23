@@ -1026,6 +1026,13 @@
       {
         "action": "route",
         "rule_set": [
+          "OpenAI"
+        ],
+        "outbound": "🤖 OpenAI"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "GoogleFCM"
         ],
         "outbound": "☁️ GoogleFCM"
@@ -1064,13 +1071,6 @@
           ""
         ],
         "outbound": "👍 Facebook"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          ""
-        ],
-        "outbound": "🤖 OpenAI"
       },
       {
         "action": "route",
