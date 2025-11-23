@@ -10,4 +10,3 @@ https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/AliPay/AliPay.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/BiliBili/BiliBili.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/GitHub/GitHub.list
-https://github.com/GitMetaio/Surfing/raw/refs/heads/rm/Home/rules/WebRTC.list
