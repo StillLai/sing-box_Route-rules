@@ -734,6 +734,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "GitHub",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/GitHub.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "TikTok",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/TikTok.srs",
@@ -814,13 +821,6 @@
         "tag": "Discord",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Discord.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "GitHub",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/GitHub.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -977,7 +977,7 @@
       {
         "action": "route",
         "rule_set": [
-          ""
+          "GitHub"
         ],
         "outbound": "🐱 GitHub"
       },
