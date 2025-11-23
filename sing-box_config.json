@@ -80,7 +80,7 @@
       },
       {
         "rule_set": [
-          "fakeip-filter"
+          "ads"
         ],
         "action": "reject",
         "method": "drop"
