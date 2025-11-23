@@ -919,6 +919,28 @@
       {
         "action": "route",
         "rule_set": [
+          "amazon",
+          "amazon-ads"
+        ],
+        "outbound": "🅰️ 亚马逊"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "WebRTC"
+        ],
+        "outbound": "🔀 WebRTC"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "ads"
+        ],
+        "outbound": "🛑 广告域名"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "private",
           "privateip"
         ],
@@ -930,21 +952,6 @@
           "trackerslist"
         ],
         "outbound": "📋 Trackerslist"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "amazon",
-          "amazon-ads"
-        ],
-        "outbound": "🅰️ 亚马逊"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "ads"
-        ],
-        "outbound": "🛑 广告域名"
       },
       {
         "action": "route",
