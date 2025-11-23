@@ -87,7 +87,11 @@
           "privateip",
           "trackerslist",
           "amazon",
-          "amazon-ads"
+          "amazon-ads",
+          "ads",
+          "WebRTC",
+          "custom_block",
+          "custom_direct"
         ],
         "server": "Ali-DNS"
       },
