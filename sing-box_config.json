@@ -911,6 +911,14 @@
       {
         "action": "route",
         "rule_set": [
+          "amazon",
+          "amazon-ads"
+        ],
+        "outbound": "🅰️ 亚马逊"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "private",
           "privateip"
         ],
