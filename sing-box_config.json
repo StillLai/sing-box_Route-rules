@@ -1005,7 +1005,7 @@
       {
         "action": "route",
         "rule_set": [
-          ""
+          "Spotify"
         ],
         "outbound": "💚 Spotify"
       },
