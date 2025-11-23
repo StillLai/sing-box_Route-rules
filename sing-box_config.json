@@ -741,6 +741,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "YouTube",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/YouTube.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "TikTok",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/TikTok.srs",
@@ -765,13 +772,6 @@
         "tag": "Telegram",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Telegram.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "YouTube",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/YouTube.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -984,6 +984,13 @@
       {
         "action": "route",
         "rule_set": [
+          "YouTube"
+        ],
+        "outbound": "📹 YouTube"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "TikTok"
         ],
         "outbound": "🎶 TikTok"
@@ -1001,13 +1008,6 @@
           ""
         ],
         "outbound": "🐦 Twitter(X)"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          ""
-        ],
-        "outbound": "📹 YouTube"
       },
       {
         "action": "route",
