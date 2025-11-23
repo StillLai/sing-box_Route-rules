@@ -948,14 +948,6 @@
       {
         "action": "route",
         "rule_set": [
-          "private",
-          "privateip"
-        ],
-        "outbound": "🔒 私有网络"
-      },
-      {
-        "action": "route",
-        "rule_set": [
           "steam"
         ],
         "outbound": "🎮 Steam"
