@@ -776,23 +776,16 @@
         "update_interval": "6h"
       },
       {
-        "tag": "microsoft-cn",
+        "tag": "GoogleFCM",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/microsoft-cn.srs",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/GoogleFCM.srs",
         "format": "binary",
         "update_interval": "6h"
       },
       {
-        "tag": "apple-cn",
+        "tag": "Google",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/apple-cn.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "games-cn",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/games-cn.srs",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Google.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -828,48 +821,6 @@
         "tag": "appletv",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/appletv.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "GoogleFCM",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/GoogleFCM.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "Google",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Google.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "youtube",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/youtube.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "tiktok",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/tiktok.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "bilibili",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/bilibili.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "spotify",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/spotify.srs",
         "format": "binary",
         "update_interval": "6h"
       },
