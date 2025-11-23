@@ -948,6 +948,13 @@
       {
         "action": "route",
         "rule_set": [
+          "DouYin"
+        ],
+        "outbound": "🍠 小红书"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "steam"
         ],
         "outbound": "🎮 Steam"
