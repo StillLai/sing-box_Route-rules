@@ -629,6 +629,13 @@
     "find_process": true,
     "rule_set": [
       {
+        "tag": "custom_whitelist",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/217heidai/adblockfilters/raw/refs/heads/main/rules/adblocksingbox.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "ads",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/217heidai/adblockfilters/raw/refs/heads/main/rules/adblocksingbox.srs",
