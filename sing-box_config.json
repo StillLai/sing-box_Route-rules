@@ -657,6 +657,20 @@
         "update_interval": "2h"
       },
       {
+        "tag": "amazon",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/amazon.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "amazon-ads",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/amazon-ads.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "ads",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/217heidai/adblockfilters/raw/refs/heads/main/rules/adblocksingbox.srs",
@@ -681,20 +695,6 @@
         "tag": "trackerslist",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/trackerslist.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "amazon",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/amazon.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "amazon-ads",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/amazon-ads.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -919,17 +919,17 @@
       {
         "action": "route",
         "rule_set": [
-          "WebRTC"
-        ],
-        "outbound": "🔀 WebRTC"
-      },
-      {
-        "action": "route",
-        "rule_set": [
           "ads",
           "custom_block"
         ],
         "outbound": "🛑 广告域名"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "WebRTC"
+        ],
+        "outbound": "🔀 WebRTC"
       },
       {
         "action": "route",
