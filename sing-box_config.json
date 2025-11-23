@@ -170,6 +170,15 @@
     },
     {
       "type": "selector",
+      "tag": "🔀 WebRTC",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🔴 全球拦截",
+        "🎯 全球直连"
+      ]
+    },
+    {
+      "type": "selector",
       "tag": "🐟 漏网之鱼",
       "interrupt_exist_connections": true,
       "outbounds": [
