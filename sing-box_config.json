@@ -904,6 +904,13 @@
       {
         "action": "route",
         "rule_set": [
+          "custom_whitelist"
+        ],
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "private",
           "privateip"
         ],
