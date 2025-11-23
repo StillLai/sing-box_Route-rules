@@ -80,15 +80,6 @@
       },
       {
         "rule_set": [
-          "ads",
-          "WebRTC",
-          "custom_block"
-        ],
-        "action": "reject",
-        "method": "drop"
-      },
-      {
-        "rule_set": [
           "fakeip-filter",
           "private",
           "cn",
