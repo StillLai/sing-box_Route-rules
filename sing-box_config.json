@@ -692,9 +692,9 @@
         "update_interval": "6h"
       },
       {
-        "tag": "XiaoHongShu",
+        "tag": "BiliBili",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/XiaoHongShu.srs",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/BiliBili.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -706,9 +706,9 @@
         "update_interval": "6h"
       },
       {
-        "tag": "BiliBili",
+        "tag": "XiaoHongShu",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/BiliBili.srs",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/XiaoHongShu.srs",
         "format": "binary",
         "update_interval": "6h"
       },
