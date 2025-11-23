@@ -948,7 +948,7 @@
       {
         "action": "route",
         "rule_set": [
-          ""
+          "XiaoHongShu"
         ],
         "outbound": "🍠 小红书"
       },
