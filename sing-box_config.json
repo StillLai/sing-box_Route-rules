@@ -957,7 +957,7 @@
         "rule_set": [
           ""
         ],
-        "outbound": "🍠 小红书"
+        "outbound": "📺 哔哩哔哩"
       },
       {
         "action": "route",
