@@ -783,6 +783,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "Facebook",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Facebook.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "Discord",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Discord.srs",
@@ -793,13 +800,6 @@
         "tag": "OpenAI",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/OpenAI.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "Facebook",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Facebook.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -1026,6 +1026,13 @@
       {
         "action": "route",
         "rule_set": [
+          "Facebook"
+        ],
+        "outbound": "👍 Facebook"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "Discord"
         ],
         "outbound": "💬 Discord"
@@ -1064,13 +1071,6 @@
           ""
         ],
         "outbound": "🪟 Microsoft"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          ""
-        ],
-        "outbound": "👍 Facebook"
       },
       {
         "action": "route",
