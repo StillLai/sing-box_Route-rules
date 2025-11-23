@@ -21,7 +21,6 @@
     "cache_file": {
       "enabled": true,
       "path": "cache.db",
-      "cache_id": "",
       "store_fakeip": true,
       "store_rdrc": true,
       "rdrc_timeout": "7d"
@@ -1061,14 +1060,14 @@
       {
         "action": "route",
         "rule_set": [
-          ""
+          "Apple"
         ],
         "outbound": "🍎 Apple"
       },
       {
         "action": "route",
         "rule_set": [
-          ""
+          "Microsoft"
         ],
         "outbound": "🪟 Microsoft"
       },
