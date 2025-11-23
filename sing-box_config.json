@@ -790,69 +790,6 @@
         "update_interval": "6h"
       },
       {
-        "tag": "netflix",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/netflix.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "disney",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/disney.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "max",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/max.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "primevideo",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/primevideo.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "appletv",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/appletv.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "media",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/media.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "games",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/games.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "ai",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/ai.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "networktest",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/networktest.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
         "tag": "tld-proxy",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/tld-proxy.srs",
@@ -863,20 +800,6 @@
         "tag": "proxy",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/proxy.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "private",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/private.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "privateip",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/privateip.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -895,30 +818,16 @@
         "update_interval": "6h"
       },
       {
-        "tag": "netflixip",
+        "tag": "private",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/netflixip.srs",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/private.srs",
         "format": "binary",
         "update_interval": "6h"
       },
       {
-        "tag": "mediaip",
+        "tag": "privateip",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/mediaip.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "gamesip",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/gamesip.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "telegramip",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/telegramip.srs",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/privateip.srs",
         "format": "binary",
         "update_interval": "6h"
       }
