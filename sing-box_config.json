@@ -984,16 +984,16 @@
       {
         "action": "route",
         "rule_set": [
-          ""
+          "TikTok"
         ],
-        "outbound": "💬 Discord"
+        "outbound": "🎶 TikTok"
       },
       {
         "action": "route",
         "rule_set": [
           ""
         ],
-        "outbound": "🎶 TikTok"
+        "outbound": "💬 Discord"
       },
       {
         "action": "route",
