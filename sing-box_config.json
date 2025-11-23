@@ -804,6 +804,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "OpenAI",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/OpenAI.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "tld-proxy",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/tld-proxy.srs",
