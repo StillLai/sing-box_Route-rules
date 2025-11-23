@@ -941,6 +941,13 @@
       {
         "action": "route",
         "rule_set": [
+          ""
+        ],
+        "outbound": "📺 哔哩哔哩"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "DouYin"
         ],
         "outbound": "🎵 抖音"
@@ -951,13 +958,6 @@
           "XiaoHongShu"
         ],
         "outbound": "🍠 小红书"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          ""
-        ],
-        "outbound": "📺 哔哩哔哩"
       },
       {
         "action": "route",
