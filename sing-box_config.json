@@ -685,13 +685,6 @@
         "update_interval": "6h"
       },
       {
-        "tag": "fakeip-filter",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
         "tag": "trackerslist",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/trackerslist.srs",
@@ -877,6 +870,13 @@
         "tag": "privateip",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/privateip.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "fakeip-filter",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs",
         "format": "binary",
         "update_interval": "6h"
       }
