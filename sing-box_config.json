@@ -762,6 +762,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "Spotify",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Spotify.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "Telegram",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Telegram.srs",
@@ -786,13 +793,6 @@
         "tag": "OpenAI",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/OpenAI.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "Spotify",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Spotify.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -1005,6 +1005,13 @@
       {
         "action": "route",
         "rule_set": [
+          ""
+        ],
+        "outbound": "💚 Spotify"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "Telegram"
         ],
         "outbound": "✈️ Telegram"
@@ -1057,13 +1064,6 @@
           ""
         ],
         "outbound": "🪟 Microsoft"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          ""
-        ],
-        "outbound": "💚 Spotify"
       },
       {
         "action": "route",
