@@ -15,3 +15,4 @@ https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/DouYin/DouYin.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/BiliBili/BiliBili.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Steam/Steam.list
+https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/TikTok/TikTok.list
