@@ -769,6 +769,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "Twitter",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Twitter.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "Discord",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Discord.srs",
@@ -779,13 +786,6 @@
         "tag": "OpenAI",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/OpenAI.srs",
-        "format": "binary",
-        "update_interval": "6h"
-      },
-      {
-        "tag": "Twitter",
-        "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Twitter.srs",
         "format": "binary",
         "update_interval": "6h"
       },
@@ -1012,16 +1012,16 @@
       {
         "action": "route",
         "rule_set": [
-          "Discord"
+          "Twitter"
         ],
-        "outbound": "💬 Discord"
+        "outbound": "🐦 Twitter(X)"
       },
       {
         "action": "route",
         "rule_set": [
-          ""
+          "Discord"
         ],
-        "outbound": "🐦 Twitter(X)"
+        "outbound": "💬 Discord"
       },
       {
         "action": "route",
