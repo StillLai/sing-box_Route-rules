@@ -934,6 +934,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "MeiTuan",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/MeiTuan.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "Alibaba",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Alibaba.srs",
