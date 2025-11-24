@@ -1078,9 +1078,9 @@
       {
         "action": "route",
         "rule_set": [
-          "OpenAI"
+          "ai"
         ],
-        "outbound": "🤖 OpenAI"
+        "outbound": "🤖 AI平台"
       },
       {
         "action": "route",
