@@ -1,0 +1,19 @@
+{
+  "rules": [
+    {
+      "domain": [
+        ".ctc",
+        ".yingt.fun",
+        "cdn.palm-ad.com",
+        "s.yunmengdata.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "..ctc",
+        "..yingt.fun"
+      ]
+    }
+  ],
+  "version": 3
+}

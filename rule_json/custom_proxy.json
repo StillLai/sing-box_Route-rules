@@ -1,0 +1,25 @@
+{
+  "rules": [
+    {
+      "domain": [
+        ".imgur.com",
+        ".vercel.app",
+        "feiniaoyun.top",
+        "feiniaoyun.xyz",
+        "linux.do",
+        "modded-1.com",
+        "modder.me",
+        "sing-box.sagernet.org",
+        "wiki.metacubex.one",
+        "www.v2ex.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        "..imgur.com",
+        "..vercel.app"
+      ]
+    }
+  ],
+  "version": 3
+}
