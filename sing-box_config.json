@@ -83,7 +83,8 @@
           "amazon",
           "amazon-ads",
           "Tencent",
-          "WeChat"
+          "WeChat",
+          "MeiTuan"
         ],
         "server": "Tencent-DNS"
       },
