@@ -5,6 +5,7 @@ import json
 import requests
 import yaml
 import ipaddress
+import re
 
 def read_yaml_from_url(url):
     response = requests.get(url)
@@ -26,6 +27,39 @@ def is_ipv4_or_ipv6(address):
             return 'ipv6'
         except ValueError:
             return None
+
+def is_android_package_name(text):
+    """
+    判断是否为安卓程序包名
+    安卓包名通常符合以下特征：
+    1. 包含点分隔符（如 com.example.app）
+    2. 每部分以字母开头，包含字母、数字、下划线
+    3. 通常以 com., org., net. 等常见域名开头
+    """
+    if not text or not isinstance(text, str):
+        return False
+    
+    # 基本格式检查：包含点分隔符
+    if '.' not in text:
+        return False
+    
+    # 检查每部分是否符合包名规范
+    parts = text.split('.')
+    for part in parts:
+        if not part:  # 空部分
+            return False
+        if not part[0].isalpha():  # 每部分必须以字母开头
+            return False
+        if not re.match(r'^[a-zA-Z0-9_]+$', part):  # 只包含字母、数字、下划线
+            return False
+    
+    # 常见的包名前缀
+    common_prefixes = ['com', 'org', 'net', 'edu', 'gov', 'mil', 'android', 'google']
+    if parts[0] in common_prefixes:
+        return True
+    
+    # 如果不符合常见前缀，但格式正确，也认为是包名
+    return len(parts) >= 2  # 至少有两部分
 
 def parse_and_convert_to_dataframe(link):
     if link.endswith('.yaml') or link.endswith('.txt'):
@@ -108,9 +142,9 @@ def parse_list_file(link, output_directory):
     duplicate_mappings = []
     for pattern in df_filtered['pattern'].unique():
         if pattern == 'PROCESS-NAME':
-            # 对于PROCESS-NAME，创建两个映射
-            duplicate_mappings.append({'pattern': pattern, 'mapped_pattern': 'process_name'})
-            duplicate_mappings.append({'pattern': pattern, 'mapped_pattern': 'package_name'})
+            # 对于PROCESS-NAME，我们不再创建两个映射，而是根据内容判断
+            # 这里只添加一个占位符，实际处理会在后面进行
+            duplicate_mappings.append({'pattern': pattern, 'mapped_pattern': 'process_name_placeholder'})
         else:
             # 对于其他模式，使用正常映射
             duplicate_mappings.append({'pattern': pattern, 'mapped_pattern': map_dict[pattern]})
@@ -119,6 +153,49 @@ def parse_list_file(link, output_directory):
     
     # 合并原始数据和映射
     df_with_mappings = pd.merge(df_filtered, mapping_df, on='pattern')
+    
+    # 处理 PROCESS-NAME 的特殊逻辑
+    process_name_rows = df_with_mappings[df_with_mappings['mapped_pattern'] == 'process_name_placeholder'].copy()
+    other_rows = df_with_mappings[df_with_mappings['mapped_pattern'] != 'process_name_placeholder'].copy()
+    
+    # 分别处理安卓包名和其他进程名
+    android_packages = []
+    other_processes = []
+    
+    for _, row in process_name_rows.iterrows():
+        address = row['address']
+        if is_android_package_name(address):
+            android_packages.append(address)
+        else:
+            other_processes.append(address)
+    
+    # 创建新的DataFrame来存储处理后的结果
+    processed_rows = []
+    
+    # 添加安卓包名
+    for package in android_packages:
+        processed_rows.append({
+            'pattern': 'PROCESS-NAME',
+            'address': package,
+            'other': None,
+            'mapped_pattern': 'package_name'
+        })
+    
+    # 添加其他进程名
+    for process in other_processes:
+        processed_rows.append({
+            'pattern': 'PROCESS-NAME',
+            'address': process,
+            'other': None,
+            'mapped_pattern': 'process_name'
+        })
+    
+    # 合并处理后的行和其他行
+    if processed_rows:
+        processed_df = pd.DataFrame(processed_rows)
+        df_with_mappings = pd.concat([other_rows, processed_df], ignore_index=True)
+    else:
+        df_with_mappings = other_rows
     
     df_with_mappings = df_with_mappings.drop_duplicates().reset_index(drop=True)
 
