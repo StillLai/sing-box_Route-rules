@@ -75,7 +75,6 @@
     },
     {
       "package_name": [
-        "Telegram.exe",
         "nekox.messenger",
         "org.telegram.messenger",
         "tw.nekomimi.nekogram",
@@ -84,6 +83,7 @@
     },
     {
       "process_name": [
+        "Telegram.exe",
         "telegram-desktop"
       ]
     }

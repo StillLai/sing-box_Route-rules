@@ -1409,7 +1409,6 @@
     },
     {
       "package_name": [
-        "GoogleDriveFS.exe",
         "com.android.vending",
         "com.google.android.gms",
         "com.google.android.gsf",
@@ -1418,7 +1417,8 @@
     },
     {
       "process_name": [
-        "BackupandSync"
+        "BackupandSync",
+        "GoogleDriveFS.exe"
       ]
     }
   ],
