@@ -29,3 +29,4 @@ https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Alibaba/Alibaba.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/MeiTuan/MeiTuan.list
 https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Eleme/Eleme.list
+https://github.com/blackmatrix7/ios_rule_script/raw/refs/heads/master/rule/Clash/Weibo/Weibo.list
