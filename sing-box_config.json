@@ -782,6 +782,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "Weibo",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Weibo.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "XiaoHongShu",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/XiaoHongShu.srs",
