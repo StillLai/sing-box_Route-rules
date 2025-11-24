@@ -76,8 +76,6 @@
       },
       {
         "rule_set": [
-          "amazon",
-          "amazon-ads",
           "Tencent",
           "WeChat",
           "MeiTuan"
@@ -94,11 +92,7 @@
           "trackerslist",
           "Alibaba",
           "AliPay",
-          "Eleme",
-          "ads",
-          "WebRTC",
-          "custom_block",
-          "custom_direct"
+          "Eleme"
         ],
         "server": "Ali-DNS"
       },
