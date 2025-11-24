@@ -97,22 +97,7 @@
         "server": "Ali-DNS"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "rule_set": [
-              "tld-proxy",
-              "proxy"
-            ]
-          },
-          {
-            "query_type": [
-              "A",
-              "AAAA"
-            ]
-          }
-        ],
+        "query_type": ["A", "AAAA"],
         "server": "Fakeip",
         "rewrite_ttl": 1
       }
