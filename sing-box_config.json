@@ -828,9 +828,9 @@
         "update_interval": "6h"
       },
       {
-        "tag": "OpenAI",
+        "tag": "ai",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/OpenAI.srs",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/sing-box-ruleset/ai.srs",
         "format": "binary",
         "update_interval": "6h"
       },
