@@ -1048,6 +1048,20 @@
       {
         "action": "route",
         "rule_set": [
+          "WeChat"
+        ],
+        "outbound": "🟢 微信"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "AliPay"
+        ],
+        "outbound": "💳 支付宝"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "Steam"
         ],
         "outbound": "🎮 Steam"
