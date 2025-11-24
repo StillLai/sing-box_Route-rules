@@ -516,7 +516,7 @@
     },
     {
       "type": "selector",
-      "tag": "🤖 OpenAI",
+      "tag": "🤖 AI平台",
       "interrupt_exist_connections": true,
       "outbounds": [
         "🚀 节点选择",
