@@ -227,7 +227,7 @@
     },
     {
       "type": "selector",
-      "tag": "🍠 小红书",
+      "tag": "📺 哔哩哔哩",
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎯 全球直连",
@@ -261,7 +261,41 @@
     },
     {
       "type": "selector",
-      "tag": "📺 哔哩哔哩",
+      "tag": "🍠 小红书",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🟢 微信",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "💳 支付宝",
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎯 全球直连",
@@ -740,6 +774,20 @@
         "tag": "XiaoHongShu",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/XiaoHongShu.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "WeChat",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/WeChat.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "AliPay",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/AliPay.srs",
         "format": "binary",
         "update_interval": "6h"
       },
