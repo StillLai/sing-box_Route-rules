@@ -108,6 +108,13 @@
           "proxy"
         ],
         "server": "Cloudflare-DNS"
+      },
+      {
+        "rule_set": [
+          "tld-proxy",
+          "proxy"
+        ],
+        "server": "Cloudflare-DNS"
       }
     ],
     "independent_cache": true,
