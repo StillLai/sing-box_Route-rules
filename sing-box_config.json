@@ -92,18 +92,9 @@
       },
       {
         "rule_set": [
-          "cn",
-          "cnip",
-          "private",
-          "privateip",
-          "trackerslist",
           "Alibaba",
           "AliPay",
-          "Eleme",
-          "ads",
-          "WebRTC",
-          "custom_block",
-          "custom_direct"
+          "Eleme"
         ],
         "server": "Ali-DNS"
       },
