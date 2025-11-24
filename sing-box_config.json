@@ -98,6 +98,7 @@
           "trackerslist",
           "Alibaba",
           "AliPay",
+          "Eleme",
           "ads",
           "WebRTC",
           "custom_block",
@@ -945,6 +946,13 @@
         "tag": "Alibaba",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Alibaba.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Eleme",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Eleme.srs",
         "format": "binary",
         "update_interval": "6h"
       },
