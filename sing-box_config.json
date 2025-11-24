@@ -306,7 +306,7 @@
     },
     {
       "type": "selector",
-      "tag": "💳 支付宝",
+      "tag": "🟦 支付宝",
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎯 全球直连",
@@ -1096,7 +1096,7 @@
         "rule_set": [
           "AliPay"
         ],
-        "outbound": "💳 支付宝"
+        "outbound": "🟦 支付宝"
       },
       {
         "action": "route",
