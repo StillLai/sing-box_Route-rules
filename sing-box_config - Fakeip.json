@@ -1,0 +1,1278 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "0.0.0.0:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
+      "external_ui_download_detour": "🚀 节点选择",
+      "secret": "",
+      "default_mode": "rule",
+      "access_control_allow_origin": [
+        "*"
+      ],
+      "access_control_allow_private_network": false
+    },
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    }
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "Ali-DNS",
+        "type": "h3",
+        "domain_resolver": "Ali-DNS-Resolver",
+        "server": "dns.alidns.com"
+      },
+      {
+        "tag": "Ali-DNS-Resolver",
+        "type": "tls",
+        "server": "223.5.5.5"
+      },
+      {
+        "tag": "Tencent-DNS",
+        "type": "tls",
+        "domain_resolver": "Tencent-DNS-Resolver",
+        "server": "dot.pub"
+      },
+      {
+        "tag": "Tencent-DNS-Resolver",
+        "type": "udp",
+        "server": "119.29.29.29"
+      },
+      {
+        "tag": "Cloudflare-DNS",
+        "type": "h3",
+        "domain_resolver": "Cloudflare-DNS-Resolver",
+        "server": "dns.cloudflare.com",
+        "detour": "🌐 DNS连接"
+      },
+      {
+        "tag": "Cloudflare-DNS-Resolver",
+        "type": "udp",
+        "server": "1.1.1.1",
+        "detour": "🌐 DNS连接"
+      },
+      {
+        "tag": "Fakeip",
+        "type": "fakeip",
+        "inet4_range": "198.18.0.0/15",
+        "inet6_range": "fc00::/18"
+      }
+    ],
+    "rules": [
+      {
+        "clash_mode": "direct",
+        "server": "Ali-DNS"
+      },
+      {
+        "clash_mode": "global",
+        "server": "Fakeip"
+      },
+      {
+        "rule_set": [
+          "amazon",
+          "amazon-ads",
+          "Tencent",
+          "WeChat",
+          "MeiTuan"
+        ],
+        "server": "Tencent-DNS"
+      },
+      {
+        "rule_set": [
+          "fakeip-filter",
+          "cn",
+          "cnip",
+          "private",
+          "privateip",
+          "trackerslist",
+          "Alibaba",
+          "AliPay",
+          "Eleme",
+          "ads",
+          "WebRTC",
+          "custom_block",
+          "custom_direct"
+        ],
+        "server": "Ali-DNS"
+      },
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          {
+            "rule_set": [
+              "tld-proxy",
+              "proxy"
+            ]
+          },
+          {
+            "query_type": [
+              "A",
+              "AAAA"
+            ]
+          }
+        ],
+        "server": "Fakeip",
+        "rewrite_ttl": 1
+      }
+    ],
+    "independent_cache": true,
+    "final": "Ali-DNS"
+  },
+  "inbounds": [
+    {
+      "tag": "mixed-in",
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 5297
+    },
+    {
+      "tag": "tun-in",
+      "type": "tun",
+      "interface_name": "sing-box",
+      "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"],
+      "mtu": 9000,
+      "auto_route": true,
+      "route_exclude_address": ["10.0.0.0/8", "100.64.0.0/10", "169.254.0.0/16", "172.16.0.0/12", "192.0.0.0/24", "192.168.0.0/16"],
+      "strict_route": true,
+      "endpoint_independent_nat": false,
+      "stack": "system"
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "🚀 节点选择",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🛑 广告域名",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🔴 全球拦截",
+        "🎯 全球直连"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🔀 WebRTC",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🔴 全球拦截",
+        "🎯 全球直连"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🐟 漏网之鱼",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌐 DNS连接",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎯 全球直连"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "📋 Trackerslist",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🅰️ 亚马逊",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🔴 全球拦截",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "📺 哔哩哔哩",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🎵 抖音",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "👁️ 微博",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🍠 小红书",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🟢 微信",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🟦 支付宝",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🎮 Steam",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🦅 育碧",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🍎 Apple",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🪟 Microsoft",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "✈️ Telegram",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "💬 Discord",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "💚 Spotify",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🎶 TikTok",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "📹 YouTube",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🎥 Netflix",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🌍 国外媒体",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🇬 Google",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "☁️ GoogleFCM",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "👍 Facebook",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🤖 AI平台",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🐱 GitHub",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "🐦 Twitter(X)",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连",
+        "🔴 全球拦截"
+      ]
+    },
+    {
+      "type": "direct",
+      "tag": "🎯 全球直连"
+    },
+    {
+      "type": "block",
+      "tag": "🔴 全球拦截"
+    },
+    {
+      "type": "urltest",
+      "tag": "🎈 自动选择",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 150,
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "urltest",
+      "tag": "🇭🇰 香港节点",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 150,
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "urltest",
+      "tag": "🇹🇼 台湾节点",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 150,
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "urltest",
+      "tag": "🇸🇬 新加坡节点",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 150,
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "urltest",
+      "tag": "🇯🇵 日本节点",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 150,
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "urltest",
+      "tag": "🇺🇸 美国节点",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 150,
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "urltest",
+      "tag": "🧭 其它地区",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "3m",
+      "tolerance": 150,
+      "interrupt_exist_connections": true,
+      "outbounds": []
+    },
+    {
+      "type": "selector",
+      "tag": "GLOBAL",
+      "interrupt_exist_connections": true,
+      "outbounds": [
+        "🎈 自动选择",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🇸🇬 新加坡节点",
+        "🇯🇵 日本节点",
+        "🇺🇸 美国节点",
+        "🧭 其它地区",
+        "🎯 全球直连"
+      ]
+    }
+  ],
+  "route": {
+    "default_domain_resolver": {
+      "server": "Tencent-DNS"
+    },
+    "auto_detect_interface": true,
+    "find_process": true,
+    "rule_set": [
+      {
+        "tag": "custom_whitelist",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/custom_whitelist.srs",
+        "format": "binary",
+        "update_interval": "1h"
+      },
+      {
+        "tag": "custom_block",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/custom_block.srs",
+        "format": "binary",
+        "update_interval": "1h"
+      },
+      {
+        "tag": "custom_direct",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/custom_direct.srs",
+        "format": "binary",
+        "update_interval": "1h"
+      },
+      {
+        "tag": "custom_proxy",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/custom_proxy.srs",
+        "format": "binary",
+        "update_interval": "1h"
+      },
+      {
+        "tag": "amazon",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/amazon.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "amazon-ads",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/amazon-ads.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "ads",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/217heidai/adblockfilters/raw/refs/heads/main/rules/adblocksingbox.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "WebRTC",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/WebRTC.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "trackerslist",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/trackerslist.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "BiliBili",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/BiliBili.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "DouYin",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/DouYin.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Weibo",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Weibo.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "XiaoHongShu",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/XiaoHongShu.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "WeChat",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/WeChat.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "AliPay",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/AliPay.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Steam",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Steam.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "UBI",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/UBI.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Ubisoft",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Ubisoft.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "GitHub",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/GitHub.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "YouTube",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/YouTube.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Netflix",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Netflix.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "TikTok",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/TikTok.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Spotify",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Spotify.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Telegram",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Telegram.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Twitter",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Twitter.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Facebook",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Facebook.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Discord",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Discord.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "ai",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/raw/refs/heads/sing-box-ruleset/ai.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "GoogleFCM",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/GoogleFCM.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Google",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Google.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "google-play",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/google-play.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Apple",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Apple.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Microsoft",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Microsoft.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "GlobalMedia",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/GlobalMedia.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Tencent",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Tencent.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "MeiTuan",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/MeiTuan.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Alibaba",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Alibaba.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "Eleme",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Eleme.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "fakeip-filter",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/fakeip-filter.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "tld-proxy",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/tld-proxy.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "proxy",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/proxy.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "cn",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/cn.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "cnip",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/cnip.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "private",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/private.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
+        "tag": "privateip",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/privateip.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      }
+    ],
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "custom_whitelist"
+        ],
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "amazon",
+          "amazon-ads"
+        ],
+        "outbound": "🅰️ 亚马逊"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "ads",
+          "custom_block"
+        ],
+        "outbound": "🛑 广告域名"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "WebRTC"
+        ],
+        "outbound": "🔀 WebRTC"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "trackerslist"
+        ],
+        "outbound": "📋 Trackerslist"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "BiliBili"
+        ],
+        "outbound": "📺 哔哩哔哩"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "DouYin"
+        ],
+        "outbound": "🎵 抖音"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Weibo"
+        ],
+        "outbound": "👁️ 微博"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "XiaoHongShu"
+        ],
+        "outbound": "🍠 小红书"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "WeChat"
+        ],
+        "outbound": "🟢 微信"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "AliPay"
+        ],
+        "outbound": "🟦 支付宝"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Steam"
+        ],
+        "outbound": "🎮 Steam"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "UBI",
+          "Ubisoft"
+        ],
+        "outbound": "🦅 育碧"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GitHub"
+        ],
+        "outbound": "🐱 GitHub"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "YouTube"
+        ],
+        "outbound": "📹 YouTube"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Netflix"
+        ],
+        "outbound": "🎥 Netflix"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "TikTok"
+        ],
+        "outbound": "🎶 TikTok"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Spotify"
+        ],
+        "outbound": "💚 Spotify"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Telegram"
+        ],
+        "outbound": "✈️ Telegram"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Twitter"
+        ],
+        "outbound": "🐦 Twitter(X)"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Facebook"
+        ],
+        "outbound": "👍 Facebook"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Discord"
+        ],
+        "outbound": "💬 Discord"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "ai"
+        ],
+        "outbound": "🤖 AI平台"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GoogleFCM"
+        ],
+        "outbound": "☁️ GoogleFCM"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Google",
+          "google-play"
+        ],
+        "outbound": "🇬 Google"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Apple"
+        ],
+        "outbound": "🍎 Apple"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "Microsoft"
+        ],
+        "outbound": "🪟 Microsoft"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "GlobalMedia"
+        ],
+        "outbound": "🌍 国外媒体"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "cn",
+          "cnip",
+          "private",
+          "privateip",
+          "custom_direct"
+        ],
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "tld-proxy",
+          "proxy",
+          "custom_proxy"
+        ],
+        "outbound": "🚀 节点选择"
+      }
+    ],
+    "final": "🐟 漏网之鱼"
+  }
+}
