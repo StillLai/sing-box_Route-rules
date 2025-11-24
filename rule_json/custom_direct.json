@@ -1,0 +1,17 @@
+{
+  "rules": [
+    {
+      "domain": [
+        ".omarea.com",
+        "c.viayoo.com",
+        "subconverters.com"
+      ]
+    },
+    {
+      "domain_suffix": [
+        ".omarea.com"
+      ]
+    }
+  ],
+  "version": 3
+}
