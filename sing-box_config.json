@@ -46,6 +46,19 @@
         "server": "119.29.29.29"
       },
       {
+        "tag": "Google-DNS",
+        "type": "h3",
+        "domain_resolver": "Google-DNS-Resolver",
+        "server": "dns.cloudflare.com",
+        "detour": "🌐 DNS连接"
+      },
+      {
+        "tag": "Google-DNS-Resolver",
+        "type": "udp",
+        "server": "8.8.8.8",
+        "detour": "🌐 DNS连接"
+      },
+      {
         "tag": "Cloudflare-DNS",
         "type": "h3",
         "domain_resolver": "Cloudflare-DNS-Resolver",
