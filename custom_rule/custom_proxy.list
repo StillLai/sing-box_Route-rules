@@ -7,5 +7,5 @@ DOMAIN,modder.me
 DOMAIN,modded-1.com
 DOMAIN,feiniaoyun.xyz
 DOMAIN,feiniaoyun.top
-DOMAIN-SUFFIX,.vercel.app
-DOMAIN-SUFFIX,.imgur.com
+DOMAIN-SUFFIX,vercel.app
+DOMAIN-SUFFIX,imgur.com
