@@ -124,7 +124,7 @@
       }
     ],
     "independent_cache": true,
-    "final": "Cloudflare-DNS"
+    "final": "Ali-DNS"
   },
   "inbounds": [
     {
