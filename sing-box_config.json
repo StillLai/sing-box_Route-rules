@@ -1087,6 +1087,13 @@
       {
         "action": "route",
         "rule_set": [
+          "Weibo"
+        ],
+        "outbound": "👁️ 微博"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "XiaoHongShu"
         ],
         "outbound": "🍠 小红书"
