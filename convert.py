@@ -35,8 +35,26 @@ def is_android_package_name(text):
     1. 包含点分隔符（如 com.example.app）
     2. 每部分以字母开头，包含字母、数字、下划线
     3. 通常以 com., org., net. 等常见域名开头
+    
+    同时排除其他系统的程序特征：
+    - 以 .exe, .dll, .app, .dmg 等结尾的文件
+    - 包含路径分隔符（/ 或 \）的文件路径
+    - 其他明显不是包名的格式
     """
     if not text or not isinstance(text, str):
+        return False
+    
+    # 排除明显是其他系统的程序
+    other_system_extensions = ['.exe', '.dll', '.app', '.dmg', '.msi', '.deb', '.rpm', '.pkg']
+    if any(text.lower().endswith(ext) for ext in other_system_extensions):
+        return False
+    
+    # 排除包含路径分隔符的路径
+    if '/' in text or '\\' in text:
+        return False
+    
+    # 排除包含空格的文件名
+    if ' ' in text:
         return False
     
     # 基本格式检查：包含点分隔符
