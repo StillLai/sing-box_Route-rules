@@ -63,7 +63,7 @@
         "server": "1.1.1.1"
       },
       {
-        "tag": "Fakeip-DNS",
+        "tag": "Fakeip",
         "type": "fakeip",
         "inet4_range": "198.18.0.0/15",
         "inet6_range": "fc00::/18"
@@ -76,7 +76,7 @@
       },
       {
         "clash_mode": "global",
-        "server": "Fakeip-DNS"
+        "server": "Fakeip"
       },
       {
         "rule_set": [
@@ -114,7 +114,7 @@
             ]
           }
         ],
-        "server": "Fakeip-DNS",
+        "server": "Fakeip",
         "rewrite_ttl": 3
       }
     ],
