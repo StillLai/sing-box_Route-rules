@@ -14,9 +14,9 @@
     },
     {
       "domain_suffix": [
-        ".weibo.cn",
-        ".weibo.com",
-        ".weibocdn.com"
+        "weibo.cn",
+        "weibo.com",
+        "weibocdn.com"
       ]
     }
   ],

@@ -10,10 +10,10 @@
     },
     {
       "domain_suffix": [
-        ".fengkongcloud.com",
-        ".xhscdn.com",
-        ".xhscdn.net",
-        ".xiaohongshu.com"
+        "fengkongcloud.com",
+        "xhscdn.com",
+        "xhscdn.net",
+        "xiaohongshu.com"
       ]
     }
   ],

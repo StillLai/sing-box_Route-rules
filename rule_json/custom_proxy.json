@@ -16,8 +16,8 @@
     },
     {
       "domain_suffix": [
-        ".imgur.com",
-        ".vercel.app"
+        "imgur.com",
+        "vercel.app"
       ]
     }
   ],
