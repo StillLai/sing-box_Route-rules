@@ -725,28 +725,28 @@
         "tag": "custom_whitelist",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/custom_whitelist.srs",
-        "format": "source",
+        "format": "binary",
         "update_interval": "1h"
       },
       {
         "tag": "custom_block",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/custom_block.srs",
-        "format": "source",
+        "format": "binary",
         "update_interval": "1h"
       },
       {
         "tag": "custom_direct",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/custom_direct.srs",
-        "format": "source",
+        "format": "binary",
         "update_interval": "1h"
       },
       {
         "tag": "custom_proxy",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/custom_proxy.srs",
-        "format": "source",
+        "format": "binary",
         "update_interval": "1h"
       },
       {
