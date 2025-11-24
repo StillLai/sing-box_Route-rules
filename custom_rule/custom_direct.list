@@ -1,0 +1,4 @@
+# 补充直连规则，置于漏网之鱼前面
+DOMAIN-SUFFIX,.omarea.com
+DOMAIN,c.viayoo.com
+DOMAIN,subconverters.com
