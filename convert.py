@@ -46,8 +46,8 @@ def parse_and_convert_to_dataframe(link):
                     else:
                         if address.startswith('+') or address.startswith('.'):
                             pattern = 'DOMAIN-SUFFIX'
-                            address = address[1:]
-                            if address.startswith('.'):
+                            # 只去掉+号，保留点号
+                            if address.startswith('+'):
                                 address = address[1:]
                         else:
                             pattern = 'DOMAIN'
@@ -132,7 +132,7 @@ def parse_list_file(link, output_directory):
         addresses = group['address'].tolist()
         
         if pattern == 'domain_suffix':
-            # 修改这里：去掉前面的点号
+            # 修改这里：直接使用原始地址，不添加点号
             rule_entry = {pattern: [address.strip() for address in addresses]}
             result_rules["rules"].append(rule_entry)
             domain_entries.extend([address.strip() for address in addresses])
