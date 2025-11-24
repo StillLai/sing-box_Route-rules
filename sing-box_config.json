@@ -70,12 +70,6 @@
         "type": "udp",
         "server": "1.1.1.1",
         "detour": "🌐 DNS连接"
-      },
-      {
-        "tag": "Fakeip",
-        "type": "fakeip",
-        "inet4_range": "198.18.0.0/15",
-        "inet6_range": "fc00::/18"
       }
     ],
     "rules": [
@@ -133,7 +127,7 @@
       }
     ],
     "independent_cache": true,
-    "final": "Google-DNS"
+    "final": "Tencent-DNS"
   },
   "inbounds": [
     {
