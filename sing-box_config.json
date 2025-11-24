@@ -104,8 +104,10 @@
       },
       {
         "rule_set": [
-          "tld-proxy",
-          "proxy"
+          "Google",
+          "YouTube",
+          "GoogleFCM",
+          "google-play"
         ],
         "server": "Cloudflare-DNS"
       },
