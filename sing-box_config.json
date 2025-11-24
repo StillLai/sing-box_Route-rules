@@ -1,8 +1,6 @@
 {
   "log": {
-    "disabled": false,
     "level": "fatal",
-    "output": "sing-box.log",
     "timestamp": true
   },
   "experimental": {
