@@ -124,7 +124,7 @@
           }
         ],
         "server": "Fakeip",
-        "rewrite_ttl": 3
+        "rewrite_ttl": 1
       }
     ],
     "independent_cache": true,
