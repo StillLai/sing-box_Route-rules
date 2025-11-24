@@ -78,19 +78,13 @@
         "Telegram.exe",
         "nekox.messenger",
         "org.telegram.messenger",
-        "telegram-desktop",
         "tw.nekomimi.nekogram",
         "xyz.nextalone.nagram"
       ]
     },
     {
       "process_name": [
-        "Telegram.exe",
-        "nekox.messenger",
-        "org.telegram.messenger",
-        "telegram-desktop",
-        "tw.nekomimi.nekogram",
-        "xyz.nextalone.nagram"
+        "telegram-desktop"
       ]
     }
   ],

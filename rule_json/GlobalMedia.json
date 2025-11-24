@@ -3552,13 +3552,6 @@
         "com.viu.phone",
         "com.vuclip.viu"
       ]
-    },
-    {
-      "process_name": [
-        "com.viu.pad",
-        "com.viu.phone",
-        "com.vuclip.viu"
-      ]
     }
   ],
   "version": 3

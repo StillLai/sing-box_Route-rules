@@ -69,11 +69,6 @@
       "package_name": [
         "com.spotify.music"
       ]
-    },
-    {
-      "process_name": [
-        "com.spotify.music"
-      ]
     }
   ],
   "version": 3

@@ -3143,19 +3143,8 @@
     },
     {
       "package_name": [
-        "CoreLocationAgent",
-        "LookupViewService",
-        "Music",
-        "TV",
-        "WeatherWidget",
-        "apsd",
         "com.apple.Maps",
-        "com.apple.geod",
-        "findmydevice-user-agent",
-        "fmfd",
-        "mapspushd",
-        "netbiosd",
-        "trustd"
+        "com.apple.geod"
       ]
     },
     {
@@ -3166,8 +3155,6 @@
         "TV",
         "WeatherWidget",
         "apsd",
-        "com.apple.Maps",
-        "com.apple.geod",
         "findmydevice-user-agent",
         "fmfd",
         "mapspushd",

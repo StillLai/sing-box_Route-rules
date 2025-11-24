@@ -408,11 +408,6 @@
       "package_name": [
         "com.amazon.avod.thirdpartyclient"
       ]
-    },
-    {
-      "process_name": [
-        "com.amazon.avod.thirdpartyclient"
-      ]
     }
   ],
   "version": 3

@@ -206,16 +206,6 @@
         "tv.danmaku.bili",
         "tv.danmaku.bilibilihd"
       ]
-    },
-    {
-      "process_name": [
-        "com.bilibili.app.blue",
-        "com.bilibili.app.in",
-        "com.bilibili.comic",
-        "com.bilibili.comic.intl",
-        "tv.danmaku.bili",
-        "tv.danmaku.bilibilihd"
-      ]
     }
   ],
   "version": 3
