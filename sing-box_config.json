@@ -103,24 +103,11 @@
         "server": "Ali-DNS"
       },
       {
-        "type": "logical",
-        "mode": "or",
-        "rules": [
-          {
-            "rule_set": [
-              "tld-proxy",
-              "proxy"
-            ]
-          },
-          {
-            "query_type": [
-              "A",
-              "AAAA"
-            ]
-          }
+        "rule_set": [
+          "tld-proxy",
+          "proxy"
         ],
-        "server": "Fakeip",
-        "rewrite_ttl": 1
+        "server": "Cloudflare-DNS"
       }
     ],
     "independent_cache": true,
