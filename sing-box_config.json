@@ -862,7 +862,7 @@
       {
         "tag": "cn",
         "type": "remote",
-        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/cn-lite.srs",
+        "url": "https://gh-proxy.org/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset/cn.srs",
         "format": "binary",
         "update_interval": "6h"
       },
