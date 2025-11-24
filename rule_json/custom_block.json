@@ -3,15 +3,15 @@
     {
       "domain": [
         ".ctc",
-        ".yingt.fun",
         "cdn.palm-ad.com",
-        "s.yunmengdata.com"
+        "s.yunmengdata.com",
+        "yingt.fun"
       ]
     },
     {
       "domain_suffix": [
         "..ctc",
-        "..yingt.fun"
+        ".yingt.fun"
       ]
     }
   ],

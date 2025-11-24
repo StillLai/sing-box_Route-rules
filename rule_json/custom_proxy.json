@@ -2,22 +2,22 @@
   "rules": [
     {
       "domain": [
-        ".imgur.com",
-        ".vercel.app",
         "feiniaoyun.top",
         "feiniaoyun.xyz",
+        "imgur.com",
         "linux.do",
         "modded-1.com",
         "modder.me",
         "sing-box.sagernet.org",
+        "vercel.app",
         "wiki.metacubex.one",
         "www.v2ex.com"
       ]
     },
     {
       "domain_suffix": [
-        "..imgur.com",
-        "..vercel.app"
+        ".imgur.com",
+        ".vercel.app"
       ]
     }
   ],
