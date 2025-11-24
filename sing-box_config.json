@@ -1096,6 +1096,13 @@
       {
         "action": "route",
         "rule_set": [
+          "GlobalMedia"
+        ],
+        "outbound": "🌍 国外媒体"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "cn",
           "cnip",
           "private",
