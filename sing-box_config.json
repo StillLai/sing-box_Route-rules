@@ -89,6 +89,8 @@
       },
       {
         "rule_set": [
+          "amazon",
+          "amazon-ads",
           "Tencent",
           "WeChat",
           "MeiTuan"
