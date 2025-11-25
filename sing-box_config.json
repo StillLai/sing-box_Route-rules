@@ -67,6 +67,11 @@
     ],
     "rules": [
       {
+        "query_type": ["A", "AAAA"],
+        "server": "Fakeip",
+        "rewrite_ttl": 1
+      },
+      {
         "clash_mode": "direct",
         "server": "Ali-DNS"
       },
@@ -95,11 +100,6 @@
           "Eleme"
         ],
         "server": "Ali-DNS"
-      },
-      {
-        "query_type": ["A", "AAAA"],
-        "server": "Fakeip",
-        "rewrite_ttl": 1
       }
     ],
     "independent_cache": true,
