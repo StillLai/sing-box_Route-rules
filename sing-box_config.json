@@ -121,7 +121,8 @@
         "rule_set": [
           "YouTube",
           "Google",
-          "GoogleFCM"
+          "GoogleFCM",
+          "google-play"
         ],
         "server": "Google-DNS"
       },
