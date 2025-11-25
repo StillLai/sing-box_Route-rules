@@ -69,17 +69,17 @@
     ],
     "rules": [
       {
-        "query_type": ["A", "AAAA"],
-        "server": "Fakeip",
-        "rewrite_ttl": 1
-      },
-      {
         "clash_mode": "direct",
         "server": "Ali-DNS"
       },
       {
         "clash_mode": "global",
         "server": "Fakeip"
+      },
+      {
+        "query_type": ["A", "AAAA"],
+        "server": "Fakeip",
+        "rewrite_ttl": 1
       },
       {
         "rule_set": [
