@@ -5,7 +5,7 @@
   },
   "experimental": {
     "clash_api": {
-      "default_mode": "Enhanced",
+      "default_mode": "enhanced",
       "external_controller": "0.0.0.0:9090",
       "external_ui": "ui",
       "external_ui_download_url": "https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
