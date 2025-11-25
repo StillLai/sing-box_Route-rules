@@ -109,7 +109,7 @@
         "server": "Ali-DNS"
       },
       {
-        "query_type": ["A", "AAAA"],
+        "query_type": ["A"],
         "server": "Fakeip",
         "rewrite_ttl": 1
       },
