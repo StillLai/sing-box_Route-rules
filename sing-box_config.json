@@ -77,11 +77,6 @@
         "server": "Fakeip"
       },
       {
-        "query_type": ["A", "AAAA"],
-        "server": "Fakeip",
-        "rewrite_ttl": 1
-      },
-      {
         "rule_set": [
           "Tencent",
           "WeChat",
@@ -102,6 +97,11 @@
           "Eleme"
         ],
         "server": "Ali-DNS"
+      },
+      {
+        "query_type": ["A", "AAAA"],
+        "server": "Fakeip",
+        "rewrite_ttl": 1
       }
     ],
     "final": "Tencent-DNS"
