@@ -28,36 +28,41 @@
         "type": "h3",
         "domain_resolver": "Cloudflare-DNS-Resolver",
         "server": "dns.cloudflare.com",
-        "address_strategy": "ipv4_only"
+        "address_strategy": "ipv4_only",
         "detour": "🌐 DNS连接"
       },
       {
         "tag": "Cloudflare-DNS-Resolver",
         "type": "udp",
         "server": "1.1.1.1",
+        "address_strategy": "ipv4_only",
         "detour": "🌐 DNS连接"
       },
       {
         "tag": "Ali-DNS",
         "type": "h3",
         "domain_resolver": "Ali-DNS-Resolver",
-        "server": "dns.alidns.com"
+        "server": "dns.alidns.com",
+        "address_strategy": "ipv4_only"
       },
       {
         "tag": "Ali-DNS-Resolver",
         "type": "tls",
-        "server": "223.5.5.5"
+        "server": "223.5.5.5",
+        "address_strategy": "ipv4_only"
       },
       {
         "tag": "Tencent-DNS",
         "type": "tls",
         "domain_resolver": "Tencent-DNS-Resolver",
-        "server": "dot.pub"
+        "server": "dot.pub",
+        "address_strategy": "ipv4_only"
       },
       {
         "tag": "Tencent-DNS-Resolver",
         "type": "udp",
-        "server": "119.29.29.29"
+        "server": "119.29.29.29",
+        "address_strategy": "ipv4_only"
       },
       {
         "tag": "Fakeip",
