@@ -112,6 +112,11 @@
         "server": "Ali-DNS"
       },
       {
+        "query_type": ["A", "AAAA"],
+        "server": "Fakeip",
+        "rewrite_ttl": 1
+      },
+      {
         "rule_set": [
           "Google",
           "GoogleFCM",
@@ -125,11 +130,6 @@
           "proxy"
         ],
         "server": "Cloudflare-DNS"
-      },
-      {
-        "query_type": ["A", "AAAA"],
-        "server": "Fakeip",
-        "rewrite_ttl": 1
       }
     ],
     "final": "Tencent-DNS"
