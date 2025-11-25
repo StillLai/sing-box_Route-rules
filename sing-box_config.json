@@ -112,6 +112,14 @@
         "server": "Ali-DNS"
       },
       {
+        "rule_set": [
+          "Google",
+          "GoogleFCM",
+          "google-play"
+        ],
+        "server": "Google-DNS"
+      },
+      {
         "query_type": ["A", "AAAA"],
         "server": "Fakeip",
         "rewrite_ttl": 1
