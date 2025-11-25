@@ -1242,7 +1242,8 @@
       {
         "action": "route",
         "rule_set": [
-          "Google"
+          "Google",
+          "google-play"
         ],
         "outbound": "🇬 Google"
       },
