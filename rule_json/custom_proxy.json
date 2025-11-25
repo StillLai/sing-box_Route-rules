@@ -2,7 +2,6 @@
   "rules": [
     {
       "domain": [
-        ".vercel.app",
         "feiniaoyun.top",
         "feiniaoyun.xyz",
         "imgur.com",
@@ -10,14 +9,15 @@
         "modded-1.com",
         "modder.me",
         "sing-box.sagernet.org",
+        "vercel.app",
         "wiki.metacubex.one",
         "www.v2ex.com"
       ]
     },
     {
       "domain_suffix": [
-        ".vercel.app",
-        "imgur.com"
+        "imgur.com",
+        "vercel.app"
       ]
     }
   ],
