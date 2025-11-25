@@ -943,6 +943,13 @@
         "update_interval": "6h"
       },
       {
+        "tag": "google-play",
+        "type": "remote",
+        "url": "https://gh-proxy.org/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/google-play.srs",
+        "format": "binary",
+        "update_interval": "6h"
+      },
+      {
         "tag": "Apple",
         "type": "remote",
         "url": "https://gh-proxy.org/https://github.com/StillLai/sing-box_Route-rules/raw/refs/heads/main/rule_srs/Apple.srs",
