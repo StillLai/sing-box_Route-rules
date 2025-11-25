@@ -2,16 +2,16 @@
   "rules": [
     {
       "domain": [
-        ".ctc",
-        ".yingt.fun",
         "cdn.palm-ad.com",
-        "s.yunmengdata.com"
+        "ctc",
+        "s.yunmengdata.com",
+        "yingt.fun"
       ]
     },
     {
       "domain_suffix": [
-        ".ctc",
-        ".yingt.fun"
+        "ctc",
+        "yingt.fun"
       ]
     }
   ],
