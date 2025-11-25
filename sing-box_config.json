@@ -118,6 +118,7 @@
       },
       {
         "rule_set": [
+          "YouTube",
           "Google",
           "GoogleFCM",
           "google-play"
