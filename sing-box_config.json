@@ -120,6 +120,13 @@
         "server": "Google-DNS"
       },
       {
+        "rule_set": [
+          "tld-proxy",
+          "proxy"
+        ],
+        "server": "Cloudflare-DNS"
+      },
+      {
         "query_type": ["A", "AAAA"],
         "server": "Fakeip",
         "rewrite_ttl": 1
