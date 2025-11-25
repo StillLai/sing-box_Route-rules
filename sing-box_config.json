@@ -26,17 +26,15 @@
     "independent_cache": true,
     "servers": [
       {
-        "tag": "Cloudflare-DNS",
-        "type": "h3",
-        "domain_resolver": "Cloudflare-DNS-Resolver",
-        "server": "dns.cloudflare.com",
-        "detour": "🌐 DNS连接"
+        "tag": "Tencent-DNS",
+        "type": "tls",
+        "domain_resolver": "Tencent-DNS-Resolver",
+        "server": "dot.pub"
       },
       {
-        "tag": "Cloudflare-DNS-Resolver",
+        "tag": "Tencent-DNS-Resolver",
         "type": "udp",
-        "server": "1.1.1.1",
-        "detour": "🌐 DNS连接"
+        "server": "119.29.29.29"
       },
       {
         "tag": "Ali-DNS",
@@ -50,15 +48,30 @@
         "server": "223.5.5.5"
       },
       {
-        "tag": "Tencent-DNS",
-        "type": "tls",
-        "domain_resolver": "Tencent-DNS-Resolver",
-        "server": "dot.pub"
+        "tag": "Google-DNS",
+        "type": "h3",
+        "domain_resolver": "Google-DNS-Resolver",
+        "server": "dns.google",
+        "detour": "🌐 DNS连接"
       },
       {
-        "tag": "Tencent-DNS-Resolver",
+        "tag": "Google-DNS-Resolver",
         "type": "udp",
-        "server": "119.29.29.29"
+        "server": "8.8.8.8",
+        "detour": "🌐 DNS连接"
+      },
+      {
+        "tag": "Cloudflare-DNS",
+        "type": "h3",
+        "domain_resolver": "Cloudflare-DNS-Resolver",
+        "server": "dns.cloudflare.com",
+        "detour": "🌐 DNS连接"
+      },
+      {
+        "tag": "Cloudflare-DNS-Resolver",
+        "type": "udp",
+        "server": "1.1.1.1",
+        "detour": "🌐 DNS连接"
       },
       {
         "tag": "Fakeip",
