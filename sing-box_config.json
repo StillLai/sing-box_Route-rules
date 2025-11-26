@@ -90,7 +90,6 @@
       {
         "rule_set": [
           "private",
-          "privateip",
           "amazon",
           "amazon-ads",
           "BiliBili",
@@ -104,7 +103,6 @@
         "rule_set": [
           "fakeip-filter",
           "cn",
-          "cnip",
           "trackerslist",
           "Alibaba",
           "AliPay",
