@@ -25,6 +25,10 @@
     "independent_cache": true,
     "servers": [
       {
+        "tag": "Local",
+        "type": "local"
+      },
+      {
         "tag": "Tencent-DNS",
         "type": "tls",
         "domain_resolver": "Tencent-DNS-Resolver",
@@ -89,7 +93,12 @@
       },
       {
         "rule_set": [
-          "fakeip-filter",
+          "fakeip-filter"
+        ],
+        "server": "Local"
+      },
+      {
+        "rule_set": [
           "trackerslist",
           "Alibaba",
           "AliPay",
