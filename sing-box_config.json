@@ -93,6 +93,7 @@
       },
       {
         "rule_set": [
+          "private",
           "fakeip-filter"
         ],
         "server": "Local"
@@ -108,7 +109,6 @@
       },
       {
         "rule_set": [
-          "private",
           "amazon",
           "amazon-ads",
           "BiliBili",
