@@ -1109,6 +1109,20 @@
       {
         "action": "route",
         "rule_set": [
+          "WeChat"
+        ],
+        "outbound": "🟢 微信"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "AliPay"
+        ],
+        "outbound": "🟦 支付宝"
+      },
+      {
+        "action": "route",
+        "rule_set": [
           "BiliBili"
         ],
         "outbound": "📺 哔哩哔哩"
@@ -1133,20 +1147,6 @@
           "XiaoHongShu"
         ],
         "outbound": "🍠 小红书"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "WeChat"
-        ],
-        "outbound": "🟢 微信"
-      },
-      {
-        "action": "route",
-        "rule_set": [
-          "AliPay"
-        ],
-        "outbound": "🟦 支付宝"
       },
       {
         "action": "route",
@@ -1273,9 +1273,7 @@
         "action": "route",
         "rule_set": [
           "cn",
-          "cnip",
           "private",
-          "privateip",
           "custom_direct"
         ],
         "outbound": "🎯 全球直连"
@@ -1288,6 +1286,14 @@
           "custom_proxy"
         ],
         "outbound": "🚀 节点选择"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "cnip",
+          "privateip",
+        ],
+        "outbound": "🎯 全球直连"
       }
     ],
     "final": "🐟 漏网之鱼"
