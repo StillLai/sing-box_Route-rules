@@ -89,6 +89,16 @@
       },
       {
         "rule_set": [
+          "fakeip-filter",
+          "trackerslist",
+          "Alibaba",
+          "AliPay",
+          "Eleme"
+        ],
+        "server": "Ali-DNS"
+      },
+      {
+        "rule_set": [
           "private",
           "amazon",
           "amazon-ads",
@@ -100,20 +110,15 @@
         "server": "Tencent-DNS"
       },
       {
-        "rule_set": [
-          "fakeip-filter",
-          "cn",
-          "trackerslist",
-          "Alibaba",
-          "AliPay",
-          "Eleme"
-        ],
-        "server": "Ali-DNS"
-      },
-      {
         "query_type": ["A"],
         "server": "Fakeip",
         "rewrite_ttl": 1
+      },
+      {
+        "rule_set": [
+          "cn"
+        ],
+        "server": "Ali-DNS"
       },
       {
         "rule_set": [
