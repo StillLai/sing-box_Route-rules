@@ -8,6 +8,7 @@
         "linux.do",
         "modded-1.com",
         "modder.me",
+        "shein.com",
         "sing-box.sagernet.org",
         "vercel.app",
         "wiki.metacubex.one",
@@ -17,6 +18,7 @@
     {
       "domain_suffix": [
         "imgur.com",
+        "shein.com",
         "vercel.app"
       ]
     }
