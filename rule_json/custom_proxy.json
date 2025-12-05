@@ -10,6 +10,7 @@
         "modder.me",
         "shein.com",
         "sing-box.sagernet.org",
+        "temu.com",
         "vercel.app",
         "wiki.metacubex.one",
         "www.v2ex.com"
@@ -19,6 +20,7 @@
       "domain_suffix": [
         "imgur.com",
         "shein.com",
+        "temu.com",
         "vercel.app"
       ]
     }
